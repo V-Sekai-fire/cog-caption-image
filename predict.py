@@ -35,7 +35,7 @@ class Predictor(BasePredictor):
     def predict(
         self,
         image: Path = Input(description="Grayscale input image"),
-        prompt: str = Input(description="Input prompt", default="caption es"),
+        prompt: str = Input(description="Input prompt", default="caption en"),
     ) -> str:
         """Run a single prediction on the model"""
         img = Image.open(image).convert("RGB")
